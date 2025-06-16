@@ -1,0 +1,9 @@
+  .body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PF Pixelscript pro', monospace;
+    background-color: rgb(173, 217, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
