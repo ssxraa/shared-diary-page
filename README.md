@@ -1,5 +1,5 @@
 
-## shared diary product made for nini~
+## shared diary project made for nini~
 
 shared diary project, sign up to create a shared diary with two users, sharing one password.
 the two users add entries marked with their user name and the time of addition, simulating a shared diary experience.
