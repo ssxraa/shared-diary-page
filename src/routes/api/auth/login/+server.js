@@ -5,7 +5,6 @@ export async function POST({ request }) {
     try {
         const { username, password } = await request.json();
 
-        // Find user and their diary
         const { data: user, error: userError } = await supabase
             .from('users')
             .select('diary_id')
@@ -13,8 +12,7 @@ export async function POST({ request }) {
             .single();
 
         if (userError) throw userError;
-
-        // Verify password
+        
         const { data: diary, error: diaryError } = await supabase
             .from('diaries')
             .select('id')
