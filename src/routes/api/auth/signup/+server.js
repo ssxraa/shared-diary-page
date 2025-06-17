@@ -5,12 +5,12 @@ export async function POST({ request }) {
     try {
         const { username1, username2, password } = await request.json();
 
-        // Input validation
+
         if (!username1 || !username2 || !password) {
             return json({ error: 'All fields are required' }, { status: 400 });
         }
 
-        // Create new diary
+
         const { data: diary, error: diaryError } = await supabase
             .from('diaries')
             .insert([
@@ -24,7 +24,6 @@ export async function POST({ request }) {
             return json({ error: `Diary creation failed: ${diaryError.message}` }, { status: 500 });
         }
 
-        // Create both users
         const { error: usersError } = await supabase
             .from('users')
             .insert([
@@ -34,7 +33,6 @@ export async function POST({ request }) {
 
         if (usersError) {
             console.error('Users creation error:', usersError);
-            // If users creation fails, we should clean up the diary
             await supabase
                 .from('diaries')
                 .delete()
