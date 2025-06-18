@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'PF Pixelscript Pro';
+    src: url('PFPixelscriptPro.eot');
+    src: local('PF Pixelscript Pro'), local('PFPixelscriptPro'),
+        url('PFPixelscriptPro.eot?#iefix') format('embedded-opentype'),
+        url('PFPixelscriptPro.woff2') format('woff2'),
+        url('PFPixelscriptPro.woff') format('woff'),
+        url('PFPixelscriptPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
