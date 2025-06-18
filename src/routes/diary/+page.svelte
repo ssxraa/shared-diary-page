@@ -10,6 +10,11 @@
   let modalOpen = false;
   let newEntryContent = '';
   const charsPerPage = 1300;
+  const backgrounds = {
+    'Nini': 'bg16.png',
+    'default': 'bg11.png'
+  };
+  $: backgroundImage = $currentUser.username === 'Nini' ? backgrounds['Nini'] : backgrounds['default'];
 
   onMount(async () => {
     // Redirect if not logged in
@@ -335,7 +340,7 @@
   }
 </style>
 
-<div class="background" style="background-image: url(bg11.png)"></div>
+<div class="background" style="background-image: url({backgroundImage})"></div>
 
 <div class="container">
   {#if pagedEntries[currentPage]}
@@ -381,3 +386,4 @@
     </div>
   </div>
 {/if}
+
