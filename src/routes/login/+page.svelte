@@ -73,7 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'vt323 regular';
+    font-family: 'VT323', monospace;
     font-size: 24px;
     color: white;
     text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
